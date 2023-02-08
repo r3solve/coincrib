@@ -1,19 +1,51 @@
+{% load static %}
 <!DOCTYPE html>
-{% extends '../homepage/base.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoginSystem</title> 
+    <link rel="stylesheet" href="{% static 'css/signup.css'  %}">
+    <title>Login</title>
 </head>
 <body>
-    <form method="post">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Login"/>
-        
-    </form>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <h3>cryptocrib</h3> 
+            </div>
+            <div class="button">
+                <a href="{% url 'signup-page' %}"><button>Get started</button></a>
+            </div>
+            <div class="main">
+                <div class="back">
+                <a href="{% url 'home-page' %}">  <box-icon name='left-arrow-alt'size='lg' ></box-icon></a>  
+                </div>
+                <div class="form-container">
+                    <div class="form-title">
+                        <h3>Welcome back</h3>
+                        <p>Login in into your account</p>
+                         
+                    </div>
+                    <form action="{% url 'login-page' %}" method="post">
+                        {% csrf_token %}
+                        <label for="email">Email*</label>
+                        <input type="email" name="email" id="" placeholder="Email">
+                        <label for="password">Password*</label>
+                        <input type="password" name="password" id="" placeholder="Password">
+                         
+                         <button type="submit"> Sign in </button>
+                         <p>new to cryptocrib?<a href="{% url 'signup-page' %}">Get started</a>  </p>
+                        
+                    </form>
+                </div>
+                <div class="image">
+                    <img src="{% static 'resources/images/undraw_crypto_portfolio_2jy5.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 </body>
 </html>

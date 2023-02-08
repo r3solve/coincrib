@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,400;1,500&display=swap');
+
+*,::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+@media (min-width:280px) and (max-width : 800px){
+    .container{
+        width: 100%;
+    }
+    .header{
+        width: 100%;
+        height: 60px;
+        box-shadow: 0.01em 0.01em 0.1em rgba(0,0,0,0.2);
+    }
+    .title h3{
+        padding: 0.3em 1.2em;
+        font-size: 1.8em;
+        color: rgb(71, 6, 236);
+        font-weight: 500;
+    }
+    .button{
+        position: absolute;
+        top: 1.8%;
+        right: 8%;
+    } 
+    .button button{
+        border: none;
+        background-color: transparent;
+        font-size: 1.2em;
+    }
+    .back{
+        margin: 1em;
+    }
+    .form-container{
+        margin: 1em  ;
+    }
+     .form-title h3{
+        margin: 0 2em;
+        font-size: 1.6em;
+        font-weight: 400;
+     }
+     .form-title p{
+        margin: 0 3.3em;
+     }
+     form{
+        display: block;
+        margin: 2.5em  ;
+        width: 80%;
+     }
+     input{
+        width: 100%;
+        height: 60px;
+        margin: 1em 0;
+        padding: 0.5em;
+        font-size: 1.2em;
+        border-radius: 10px;
+        border: 1px solid rgb(188, 179, 179);
+     }
+     #check{
+        width: 20px;
+         
+     }
+     #label{
+         position: absolute;
+         top: 37%;
+         left: 12%;
+         font-size: 0.7em;
+     }
+     .check{
+        position: relative;
+     }
+     #label a{
+        text-decoration: none;
+        color: rgb(71, 6, 236);
+     }
+     form button{
+        padding: 1.2em 6em;
+        border: none;
+        border-radius: 30px;
+        color: #fff;
+        background-color:rgb(71, 6, 236) ;
+        margin: 2em 0.6em;
+        cursor: pointer;
+     }
+     .image{
+        display: none;
+     }
+}
+@media (min-width:801px) and (max-width:12000px) {
+    .container{
+        width: 100%;
+    }
+    .header{
+        width: 100%;
+        height: 60px;
+        box-shadow: 0.01em 0.01em 0.1em rgba(0,0,0,0.2);
+    }
+     .title h3{
+        font-size: 2em;
+        padding: 0.3em 3.5em;
+        color: rgb(71, 6, 236);
+        cursor: pointer;
+     }
+     .button{
+        position: absolute;
+        top: 1.4%;
+        right: 10%;
+     }
+     .button button{
+        padding: 0.5em 3em;
+        border: none;
+        background-color: transparent;
+        font-size: 1em;
+        cursor: pointer;
+     }
+     .main{
+        margin: 1em;
+     }
+     .back{
+        margin: 1em;
+     }
+     .form-container{
+        margin-top: -3.5em;
+        margin-left: 4em;
+     }
+     .form-title{
+        margin: 0 3em;
+     }
+     .form-title h3{
+        font-size: 2em;
+     }
+     form{
+        margin: 2em  2.8em;
+        display: block;
+        width: 40%;
+     }
+     input{
+        width: 100%;
+        height: 50px;
+        padding: 0.5em;
+        font-size: 1.2em;
+        margin: 0.5em 0;
+     }
+     .check{
+        position: relative;
+    }
+     #check{
+        width: 20px;
+     }
+     #label{
+        position: absolute;
+        top: 30%;
+        left: 5%;
+     }
+     #label a{
+        text-decoration: none;
+        color: rgb(71, 6, 236);
+     }
+     form button{
+        margin: 2em 0;
+        border: none;
+        border-radius: 30px;
+        padding: 1.3em 16em;
+        color: #fff;
+        background-color: rgb(71, 6, 236);
+        cursor: pointer;
+     }
+     .image{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        width: 500px;
+     }
+     .image img{
+        width: 100%;
+        object-fit: contain;
+     }
+     form p{
+        margin-top: -1em;
+        text-align: center;
+        margin-left: -3em;
+     }
+     form p a{
+        text-decoration: none;
+        color: rgb(71, 6, 236);
+     }
+}
+@media (min-width : 800px) and (max-width : 1030px){
+    .image{
+        position: absolute;
+        top: 20%;
+        right: 2%;
+        width: 400px;
+    }
+}

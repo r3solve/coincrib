@@ -3,11 +3,18 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 import requests, json
 
-data = json.loads(requests.get(f"https://api.coincap.io/v2/assets/bitcoin").content.decode())
 
 # Create your views here.
 def home(request):
-    return render(request, 'homepage/index.html', { 'data' : data})
+    return render(request, 'homepage/html/index.html')
 
 def login(request):
+    return render(request, 'registration/login.html')
+
+def signup(request):
+    return render(request, 'registration/signup.html')
+
+def logout(request):
     pass
+
+
