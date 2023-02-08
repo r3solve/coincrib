@@ -20,20 +20,20 @@
             </div>
             <div class="navigation" id="navigation">
                 <ul>
-                    <li><a href="">Explore</a>
+                    <li><a href="">Market</a>
                     
                     </li>
-                    <li><a href="">Learn</a>
+                    <li><a href="">Buy / Sell</a>
                          
                     </li>
                     
-                    <li><a href="">Individuals</a></li>
+                    <li><a href="">USSD</a></li>
                      
-                    <li><a href="">Business</a></li>
+                    <!-- <li><a href="">Business</a></li> -->
                      
-                    <li><a href="">Developers</a></li>
+                    <!-- <li><a href="">Developers</a></li> -->
                     
-                    <li><a href="">Company</a></li>
+                    <li><a href="">FAQ</a></li>
                     
                 </ul>
                 <div class="nav-button">
@@ -97,6 +97,8 @@
                             <img src="{% static 'resources/images/vodafone-icon.svg' %}" alt="">
                             <img src="{% static 'resources/images/mtn-group.svg' %}" alt="">
                             <img src="{% static 'resources/images/bharti-airtel-limited.svg' %}" alt="">
+                            <img src="{% static 'resources/images/visa.svg' %}" alt="">
+                            <img src="{% static 'resources/images/mastercard.svg' %}" alt="">
                         </div>
                         
                     </div>
@@ -181,28 +183,7 @@
             </div>
         </div>
     </div>
-    <script>
-        const menu = document.getElementById('menu');
-        const nav = document.getElementById('navigation');
-        const closeButton = document.getElementById('close');
-        const right = document.getElementById('right');
-        const sub = document.getElementById('sub');
-
-        menu.addEventListener('click',(e) =>{
-            
-            nav.style.display = 'block';
-            menu.style.display = 'none';
-            closeButton.style.display = 'block';    
-        })
-        closeButton.addEventListener('click',(e) =>{
-            nav.style.display = 'none';
-            menu.style.display = 'block';
-            closeButton.style.display = 'none';
-        })
-        right.addEventListener('click',() =>{
-            sub.style.display = 'block';
-        })
-        let
+    <script src="{% static 'js/script.js' %}">
     </script>
      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
