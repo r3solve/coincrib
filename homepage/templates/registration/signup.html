@@ -30,15 +30,15 @@
                     <form action="{% url 'signup-page' %}" method="post">
                         {% csrf_token %}
                         <label for="name">First name*</label>
-                        <input type="text" name="" id="" placeholder="First name">
+                        <input type="text" name="fname" id="" placeholder="First name">
                         <label for="name">Last name*</label>
-                        <input type="text" name="" id="" placeholder="Last name">
+                        <input type="text" name="lname" id="" placeholder="Last name">
                         <label for="email">Email*</label>
-                        <input type="email" name="" id="" placeholder="Email">
+                        <input type="email" name="email" id="" placeholder="Email">
                         <label for="password">Password*</label>
-                        <input type="password" name="" id="" placeholder="Minimum 8 characters">
+                        <input type="password" name="passwd" id="" placeholder="Minimum 8 characters">
                          <div class="check">
-                            <input type="checkbox" name="" id="check">
+                            <input type="checkbox" name="check" id="check">
                         <span id="label">I certify that I am 18 years of age or older,I<br>
                         Agree to the <a href=''>User Agreement</a>, and I have read the <a href="">Privacy policy</a></span>
                          </div>
