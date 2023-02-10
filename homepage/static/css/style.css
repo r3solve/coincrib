@@ -443,7 +443,7 @@ a:hover{
         object-fit: contain;
       }
     }
-@media (min-width:801px) and  (max-width : 930px){
+@media (min-width:801px) and  (max-width : 950px){
     .main-header h3{
         font-size: 1.5em;
     }
@@ -460,7 +460,7 @@ a:hover{
         font-size: 1.4em;
     }
     .navigation ul {
-        margin-left: 0;
+        margin-left: 5em;
     }
     .navigation ul li a{
         font-size: 0.8em;
@@ -554,3 +554,33 @@ a:hover{
          display: flex;
      } 
 }              
+@media (min-width:951px) and (max-width:1200px){
+    .title h3{
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+    .navigation ul li a{
+        font-size: 0.9em;
+    }
+    .navigation ul{
+        margin-left: 8em;
+    }
+    .main-header h3{
+        font-size: 2em;
+    }
+    .image-img img{
+        width: 400px;
+        margin-top: 2em;
+    }
+}
+@media (min-width:1000px) and (max-width:1200px){
+    .image-img img{
+        width: 490px;
+    }
+    .col-4 h3{
+        margin-left: 2.8em;
+    }
+    .col-4 .p{
+        margin-left: 7em;
+    }
+}
