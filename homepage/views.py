@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
 import random
-from django.contrib.auth import login, logout, authenticate
-from django.http import HttpResponseRedirect as redirect
+from django.contrib import auth 
+# from django.http import redirect
 from django.urls import reverse
 from django.contrib import messages
-from django.contrib.auth.models import User
+
 
 
 # Create your views here.
@@ -12,20 +13,24 @@ def home(request):
     return render(request, 'homepage/html/index.html')
 
 def login(request):
-    if request.method == "POST":
-        email = request.POST["email"]
-        password = request.POST["password"]
-        user = authenticate(request, email=email, password=password)
-        if user is not None:
-            login(user,request)
-            return redirect("You are logged in " + str(request.POST.email))
+    if request.method == 'POST':
+        username = request.POST['email']
+        password = request.POST['password']
+        person = auth.authenticate(username=username, password=password)
+        if person is not None:
+            auth.login(request, person)
+            return HttpResponse('You logged in ')
+        else:
+            print(person)
+            messages.info(request, 'Invalid Username or Password')
+            return redirect('login-page')
+        
     return render(request, 'registration/login.html')
 
 def signup(request):
     if request.method == "POST":
         fname = request.POST["fname"]
         lname = request.POST["lname"]
-        userName = fname[0].lower() + lname.lower() + '0' + str(random.randrange(0, 9999))
         email = request.POST["email"]
         password = request.POST["passwd"]
         check_box = request.POST["check"]
@@ -37,13 +42,14 @@ def signup(request):
             messages.info(request, "You need to accept the terms and conditions")
             
         else:
-            user = User.objects.create_user(username=userName, password=password, email=email, first_name=fname, last_name=lname)
+            user = User.objects.create_user(username=email, password=password, email=email, first_name=fname, last_name=lname)
             user.save()
             messages.info(request, 'User Created')
-            return redirect(reverse('login-page'))
+            return redirect('login-page')
     return render(request, 'registration/signup.html')
 
 def logout(request):
-    pass
+    logout(request)
+    return redirect('home-page')
 
 
