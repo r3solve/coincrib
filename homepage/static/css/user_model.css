@@ -7,70 +7,162 @@
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
-@media (min-width  : 280px) and (max-width : 800px){
-    .container{
-        width: 100%;
+.container{
+    width: 100%;
+}
+.header .username{
+    margin: 2em 0;
+     
+     
+}
+.username p{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-left: 1em;
+
+}
+.username img{
+    width: 50px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+.balance{
+    text-align: center;
+    padding: 3em 0;
+}
+.bal-balance p{
+    font-size: 1em;
+    font-weight: 400;
+}
+.bal-balance h3{
+    font-size: 3em;
+}
+.bal-actions ul{
+   list-style-type: none;
+   display: flex;
+   margin: 3em  4.2em;
+   text-align: center;
+}
+.bal-actions ul li a{
+   margin: 0 1em;
+   background-color: #000;
+   padding: 1em 1em 0 1em;
+   border-radius: 30px;
+}
+main{
+    margin-top: -1.5em;
+    margin-left: 1.5em;
+}
+.assets-row{
+    display: block;
+    margin: 2em 0;
+}
+.assets-col{
+    display: flex;
+    margin: 1em 0;
+    position: relative;
+}
+.asset-price{
+    position: absolute;
+    top: 0;
+    right: 4%;
+}
+.asset-image{
+  margin-left: -0.6em;
+}
+.asset-name{
+    margin-left: 0.3em;
+}
+.asset-price p{
+    color: rgb(31, 176, 31);
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0.02em 0.02em 0.2em rgba(0,0,0,0.2);
+    width: 100%;
+    height: 70px;
+}
+.menu ul{
+    display: flex;
+    margin: 1.2em;
+    list-style-type: none;
+}
+.menu ul li a{
+    margin-left: 4em;
+}
+@media (width : 375px){
+    .bal-actions ul{
+        margin-left: 2.7em;
     }
-    .footer{
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        height: 70px;
-        width: 100%;
-        box-shadow: 0.02em 0.02em 0.2em rgba(0,0,0,0.2);
+}
+@media (width:280px){
+    .username img{
+        right: -10%;
     }
-    .menu ul{
-        list-style-type: none;
-        display: flex;
-        text-align: center;
-        margin: 0.85em;
+    .bal-balance{
+        margin-left: 3em;
+    }
+    .bal-actions ul{
+        margin-left: 1em;
+    }
+    .asset-price{
+        right: -2%;
     }
     .menu ul li a{
-        margin: 0 1.9em;
-        color: rgb(71,6,236);
+        margin-left: 2.5em;
     }
-    .header{
-        width: 100%;
-        height: 350px;
-        
-        background-color: rgb(71,6,236);
-
+}
+@media (width:360px){
+    .bal-actions ul{
+        margin-left: 2.3em;
+    }
+    .menu ul li a{
+        margin-left:3.5em;
+    }
+}
+@media (min-width:800px) and (max-width:1200000px){
+    .username p{
+        position: absolute;
+        top: 2%;
+        right: 10%;
     }
     .balance{
-        margin: 2em 1em ;
+        text-align: left;
+        margin-left: 10em;
     }
-    .balance p{
-        font-size: 1.2em;
-        font-weight: 200;
-        color: #fff;
+    .bal-balance h3{
+        font-size: 4em;
     }
-    .balance .bal-balance{
-        font-size: 2.5em;
-        margin: 0.5em 0;
-        font-weight: 500;
-        color: #fff;
-
+    .bal-actions ul{
+        margin-left: -1em;
     }
-    .button button{
-        padding: 1.5em 4.7em;
-        border: none;
-        color: #000;
-        border-radius: 5px;
-        margin: 1.2em 0.5em;
-        cursor: pointer;
+    .footer{
+        width: 5%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
-    .button .one{
-        
+    .menu ul{
+        display: block;
+        margin-top: 13em;
+        margin-left: -3em;
     }
-    .profile img{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin: 0.5em;
+    .menu ul li {
+      margin:5em 0 ;
     }
-    .logout{
-        position: absolute;
-        top: 1.7%;
-        right: 3%;
+    main{
+        margin-left: 10em;
+    }
+    
+}
+@media (min-width:800px) and (max-width:1200px){
+    .footer{
+        width: 8%;
     }
 }
