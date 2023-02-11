@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,400;1,500&display=swap');
+
+*,::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    width: 100%;
+}
+.main-header{
+    width: 100%;
+    text-align: center;
+    margin-top: 3.5em;
+}
+.profile-image img{
+    width: 60px;
+    height: 65px;
+    border-radius: 50%;
+}
+.profile-name h3{
+    font-size: 1.4em;
+}
+.profile-edit {
+    margin: 1em 0;
+}
+.profile-edit button{
+    padding: 1em 3em;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    background-color: black;
+}
+.preference{
+    margin: 5em 2em;
+}
+.pre-col{
+    width: 99%;
+    box-shadow: 0.01em 0.01em 0.1em rgba(0,0,0,0.2);
+    height: 100px;
+    margin-top: 1.3em;
+    padding: 0.8em;
+    border-radius: 10px;
+}
+.col h4{
+    font-weight: 300;
+}
+select{
+    float: right;
+    margin-top: -1.5em;
+    margin-right: 1.5em;
+}
+.dark h4{
+    margin-top: 1em;
+}
+.dark-mode{
+    float: right;
+    margin-top: -1.5em;
+    margin-right: 1.5em;
+    padding: 0.2em 1.2em;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: #fff;
+    border-radius: 30px;
+}
+.switch{
+    background-color: #000;
+    color: #fff;
+}
+.switch .dark-mode{
+    background-color: #fff;
+    color: #000;
+}
+.switch .pre-col{
+    background-color: #333;
+}
+.switch .profile-edit button{
+    background-color: #fff;
+    color: #000;
+}
+.back{
+    margin: 1em;
+}
+.switch box-icon{
+    color: #fff;
+}
+.col-2{
+    text-align: center;
+    margin: 1em 0;
+    font-size: 1.3em;
+}
+.col-2 a{
+    text-decoration: none;
+    color: #000;
+}
