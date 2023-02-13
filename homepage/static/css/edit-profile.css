@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,400;1,500&display=swap');
+
+*,::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    width: 100%;
+}
+.main-header{
+    width: 100%;
+    text-align: center;
+    margin-top: 3.5em;
+}
+.profile-image img{
+    width: 60px;
+    height: 65px;
+    border-radius: 50%;
+}
+.profile-name h3{
+    font-size: 1.4em;
+}
+.profile-edit {
+    margin: 1em 0;
+}
+.profile-edit button{
+    padding: 1em 3em;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    background-color: black;
+}
+.pro{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.edit{
+    margin: 3em 2.3em;
+}
+.edit h3{
+    font-size: 1.3em;
+    font-weight: 500;
+}
+input{
+    width: 95%;
+    height: 50px;
+    padding: 0.5em;
+    font-size: 1.2em;
+    border-radius: 3px;
+    margin: 1em 0;
+}
+form button{
+    width: 95%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+@media (min-width:1005px){
+    .container{
+       max-width: 800px; 
+       margin: 3em auto;
+
+    }
+   
+}

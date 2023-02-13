@@ -6,62 +6,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{% static 'css/user_model.css' %}">
+    <link rel="stylesheet" href="{% static '/css/usermodel.css' %}">
     <title>Dashboard</title>
     
 </head>
 <body>
-    <div class="container">
-        <!--footer-->
-        <div class="footer">
-            <div class="menu">
+   <div class="container">
+    <!--header-->
+    <div class="header">
+        <div class="username">
+            <p>{{request.user.email}}</p>
+            <img src="{% static 'resources/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg' %}" alt="">
+        </div>
+        <div class="balance">
+            <div class="bal-balance">
+                <p>Main Wallet</p>
+                <h3>118,000.00</h3>
+                <p class="market"><box-icon type='solid' name='right-top-arrow-circle' color="green"></box-icon> $30,000 / +25.00%</p>
+            </div>
+            <div class="bal-actions">
                 <ul>
-                    <li><a href=""><box-icon name='home-alt-2' size="md" color="rgb(71,6,236)"></box-icon></a></li>
-                    <li><a href=""><box-icon name='coin' size="md" color="rgb(71,6,236)"></box-icon></a></li>
-                    <li><a href=""><box-icon name='cog' size="md" color="rgb(71,6,236)"></box-icon></a></li>
-                    <li><a href=""><box-icon name='user-circle'size="md" color="rgb(71,6,236)"></box-icon></a></li>
+                    <li><a href=""><box-icon name='plus' size="md" color="white"  ></box-icon></a></li>
+                    <li><a href=""><box-icon name='upload'size="md" color="white" ></box-icon></a></li>
+                    <li><a href=""><box-icon name='transfer'size="md" color="white" ></box-icon></a></li>
                 </ul>
             </div>
         </div>
-        <!--header-->
-        <div class="header">
-            <div class="profile">
-                <div class="img">
-                    <img src="{% static 'resources/images/original-6337b405326bee2882b31a53b7b22bee.webp' %}" alt="">
+    </div>
+    <!--main-->
+    <main>
+        <div class="main-header">
+            <h3>Assets</h3>
+        </div>
+        <div class="assets-row">
+            <div class="assets-col">
+                <div class="asset-image">
+                    <img src="{% static 'resources/images/icons8-ethereum.svg' %}" alt="">
+                </div>
+                <div class="asset-name">
+                    <h4>Ethereum</h4>
+                    <p>55.3400ETH</p>
+                </div>
+                <div class="asset-price">
+                   <h4>$35,000</h4>
+                   <p>+12.5%</p>
                 </div>
             </div>
-            <div class="balance">
-                <p>Your Balance</p>
-                <p class="bal-balance"><span>$234.89</span></p>
-            </div>
-            <div class="button">
-              <a href=""><button class="one">Deposit</button></a>
-              <a href=""><button class="two">Withdraw</button></a> 
-              {{request.user.last_name}} 
-            </div>
-        </div>
-        <div class="logout">
-            <a href=""><box-icon name='log-out-circle' size="md" color="white"></box-icon></a>
-        </div>
-        <hr>
-        <!--main page assets-->
-        <div class="main">
-            <div class="title">
-               <h3>Assets</h3>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="image">
-                        <img src="" alt="">
-                    </div>
-                    <div class="assets-text">
-                        <h4>BTC</h4>
-                        
-                    </div>
+            <div class="assets-col">
+                <div class="asset-image">
+                 <img src="{% static 'resources/images/icons8-tether.svg' %}" alt="">
+                </div>
+                <div class="asset-name">
+                    <h4>Tether</h4>
+                    <p>34.56USDT</p>
+                </div>
+                <div class="asset-price">
+                   <h4>$20,000</h4>
+                   <p>+3.5%</p>
                 </div>
             </div>
+            <div class="assets-col">
+                <div class="asset-image">
+                 <img src="{% static 'resources/images/icons8-bitcoin.svg' %}" alt="">
+                </div>
+                <div class="asset-name">
+                    <h4>Bitcoin</h4>
+                    <p>10.20BTC</p>
+                </div>
+                <div class="asset-price">
+                   <h4>$60,000</h4>
+                   <p>+15.3%</p>
+                </div>
+            </div>
+            <div class="assets-col">
+                <div class="asset-image">
+                 <img src="{% static 'resources/images/icons8-peercoin.svg' %}" alt="">
+                </div>
+                <div class="asset-name">
+                    <h4>Peercoin</h4>
+                    <p>9.67PPC</p>
+                </div>
+                <div class="asset-price">
+                   <h4>$2,030.03</h4>
+                   <p>+0.3%</p>
+                </div>
+            </div>
+            <div class="assets-col">
+                <div class="asset-image">
+                 <img src="{% static 'resources/images/icons8-monero (1).svg' %}" alt="">
+                </div>
+                <div class="asset-name">
+                    <h4>Monero</h4>
+                    <p>4.98XMR</p>
+                </div>
+                <div class="asset-price">
+                   <h4>$130.03</h4>
+                   <p>+0.1%</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <div class="footer">
+        <div class="menu">
+            <ul>
+                <li><a href=""><box-icon name='user-circle' size="md"></box-icon></a></li>
+                <li><a href=""><box-icon name='wallet' size="md"></box-icon></a></li>
+                <li><a href=""><box-icon name='cog' size="md"></box-icon></a></li>
+            </ul>
         </div>
     </div>
+   </div>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 </body>

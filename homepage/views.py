@@ -2,7 +2,6 @@ from django.shortcuts import render
 import time
 from django.http import HttpResponseRedirect
 from django.contrib import auth 
-# from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -34,7 +33,7 @@ def signup(request):
         lname = request.POST["lname"]
         email = request.POST["email"]
         password = request.POST["passwd"]
-
+        
         if User.objects.filter(email=email).exists():
             messages.error(request,"Email Address Already Exists")
             return HttpResponseRedirect('signup')
@@ -47,7 +46,7 @@ def signup(request):
             user.save()
             messages.info(request, 'User Created')
             return HttpResponseRedirect('login')
-    return render(request, 'registration/signup.html')
+
 
 def log_out(request):
     auth.logout(request)
