@@ -43,11 +43,22 @@
                         Agree to the <a href=''>User Agreement</a>, and I have read the <a href="">Privacy policy</a></span>
                          </div>
                          <button type="submit">Create account</button>
+                         <div id="message" style='color: red;'>
+                            {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        </div>
                         
                     </form>
                 </div>
                 <div class="image">
                     <img src="{% static 'resources/images/undraw_crypto_portfolio_2jy5.svg' %}" alt="">
+                    
+                    </div>
                 </div>
             </div>
         </div>

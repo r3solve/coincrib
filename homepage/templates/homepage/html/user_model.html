@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{% static 'css/user_model.css' %}">
     <title>Dashboard</title>
+    
 </head>
 <body>
     <div class="container">
@@ -35,7 +36,8 @@
             </div>
             <div class="button">
               <a href=""><button class="one">Deposit</button></a>
-              <a href=""><button class="two">Withdraw</button></a>  
+              <a href=""><button class="two">Withdraw</button></a> 
+              {{request.user.last_name}} 
             </div>
         </div>
         <div class="logout">

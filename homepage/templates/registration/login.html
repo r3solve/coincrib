@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/signup.css'  %}">
     <title>Login</title>
+    <script>
+        // setInterval()
+    </script>
 </head>
 <body>
     <div class="container">
@@ -35,7 +38,14 @@
                         <input type="password" name="password" id="" placeholder="Password">
                          
                          <button type="submit"> Sign in </button>
-                         <p>new to cryptocrib?<a href="{% url 'signup-page' %}">Get started</a>  </p>
+                         <p>new to cryptocrib?<a href="{% url 'signup-page' %}">Get started</a> </p>
+                         {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
                         
                     </form>
                 </div>
