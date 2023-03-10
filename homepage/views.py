@@ -1,5 +1,4 @@
-from django.shortcuts import render
-import time
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib import auth 
 from django.urls import reverse
@@ -10,6 +9,7 @@ from django.contrib.auth.models import User
 
 
 # Create your views here.
+
 def home(request):
     return render(request, 'homepage/html/index.html')
 
@@ -23,7 +23,7 @@ def login(request):
             return render(request, 'homepage/html/user_model.html')
         else:
             messages.error(request, 'Invalid Username or Password')
-            return HttpResponseRedirect('login')
+            return redirect('login')
         
     return render(request, 'registration/login.html')
 
@@ -36,7 +36,7 @@ def signup(request):
         
         if User.objects.filter(email=email).exists():
             messages.error(request,"Email Address Already Exists")
-            return HttpResponseRedirect('signup')
+            
         elif "check" not in request.POST:
             messages.error(request, "You need to accept terms and conditions")
             return render(request, 'registration/signup.html')
@@ -45,16 +45,17 @@ def signup(request):
             user = User.objects.create_user(username=email, password=password, email=email, first_name=fname, last_name=lname)
             user.save()
             messages.info(request, 'User Created')
-            return HttpResponseRedirect('login')
+            return redirect('login')
+    return render(request, 'registration/signup.html')
 
 
 def log_out(request):
     auth.logout(request)
-    return HttpResponseRedirect('')
-
+    return redirect(reverse('login-page'))
+@login_required(login_url='login-page')
 def dash_board(request):
     if request.user.is_authenticated:
-        return HttpResponseRedirect('dashboard')
+        return redirect(reverse('dash_board'))
     else:
-        return HttpResponseRedirect('login')
+        return redirect(reverse('login-page'))
 
