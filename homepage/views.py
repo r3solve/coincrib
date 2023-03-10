@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from .models import Coins
 
 
 
@@ -23,7 +24,7 @@ def login(request):
             return render(request, 'homepage/html/user_model.html')
         else:
             messages.error(request, 'Invalid Username or Password')
-            return redirect('login')
+            return render(request, 'registration/login.html')
         
     return render(request, 'registration/login.html')
 
@@ -50,12 +51,18 @@ def signup(request):
 
 
 def log_out(request):
-    auth.logout(request)
-    return redirect(reverse('login-page'))
+    if request.user.is_authenticated():
+        auth.logout(request)
+        return redirect(reverse('login-page'))
+    return redirect('login')
 @login_required(login_url='login-page')
 def dash_board(request):
+    context = {'post':Coins.objects.all()}
     if request.user.is_authenticated:
-        return redirect(reverse('dash_board'))
+        return render(request, context)
     else:
-        return redirect(reverse('login-page'))
+        return redirect('login')
 
+@login_required(login_url='login/')
+def settings(request):
+    return render('homepage/html/settings.html')

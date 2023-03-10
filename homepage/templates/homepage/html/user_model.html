@@ -21,7 +21,9 @@
         <div class="balance">
             <div class="bal-balance">
                 <p>Main Wallet</p>
-                <h3>118,000.00</h3>
+                {% if post%}
+                <h3>{{post.user.price}}</h3>
+                {% endif %}
                 <p class="market"><box-icon type='solid' name='right-top-arrow-circle' color="green"></box-icon> $30,000 / +25.00%</p>
             </div>
             <div class="bal-actions">

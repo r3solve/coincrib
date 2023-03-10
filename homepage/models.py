@@ -8,8 +8,10 @@ class Transactions(models.Model):
 
 class Coins(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    symbol = models.CharField(max_length=5)
-    amount = models.FloatField()
+    btc_amount = models.FloatField(default=0.00)
+    ether_amount = models.FloatField(default=0.00)
+    pCoin_amount = models.FloatField(default=0.00)
+    # profile_image = models.ImageField(upload_to='media/', null=True)
 
     def __str__(self):
         return f"{self.owner} {self.symbol} {self.amount}"
