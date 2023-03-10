@@ -8,7 +8,7 @@
     font-family: 'Poppins',sans-serif;
 }
 a:hover{
-    color: rgb(71, 6, 236);
+    color: #000;
 } 
 @media (min-width:280px) and (max-width : 800px){
     .container{
@@ -29,7 +29,7 @@ a:hover{
     .title h3{
         padding: 0.3em 0;
         font-size: 1.8em;
-        color: rgb(71, 6, 236);
+        color: #000;
         font-weight: 500;
     }
      .right{
@@ -77,7 +77,7 @@ a:hover{
     .nav-button .one{
         padding: 1.75em 10.1em;
         border: none;
-        background-color: rgb(71, 6, 236);
+        background-color: #000;
         color: #fff;
         border-radius: 5px;
         margin-bottom: 0.8em;
@@ -86,8 +86,8 @@ a:hover{
     }
     .nav-button .two{
         padding: 1.5em 11em;
-        border: 1px solid rgb(71, 6, 236);
-        color: rgb(71, 6, 236);
+        border: 1px solid #000;
+        color: #000;
         background-color: #fff;
     }
   .sub{
@@ -122,7 +122,7 @@ a:hover{
     }
     .button button{
         border: none;
-        background-color: rgb(71, 6, 236);
+        background-color: #000;
         color: #fff;
         border-radius: 5px;
         padding: 1em 7em;
@@ -198,7 +198,7 @@ a:hover{
         background-color: whitesmoke;
     }
     .footer h3{
-        color: rgb(71, 6, 236);
+        color: #000;
         font-size: 1.5em;
         padding: 1em;
     }
@@ -277,7 +277,7 @@ a:hover{
     .title h3{
         font-size: 2em;
         padding: 0.3em 3.5em;
-        color: rgb(71, 6, 236);
+        color: #000;
         cursor: pointer;
     }
     .navigation ul{
@@ -300,7 +300,7 @@ a:hover{
         border-radius: 5px;
         padding: 0.8em 3em;
         color: #fff;
-        background-color: rgb(71, 6, 236);
+        background-color: #000;
         cursor: pointer;
     }
     .nav-button .two{
@@ -324,7 +324,7 @@ a:hover{
         border: none;
         border-radius: 5px;
         color:#fff;
-        background-color: rgb(71, 6, 236);
+        background-color: #000;
         margin: 3em 0;
     }
     .image-img{
@@ -379,7 +379,7 @@ a:hover{
       }
       .footer h3{
         font-size: 2em;
-        color: rgb(71, 6, 236);
+        color: #000;
         padding: 1em 2em;
       }
       .main-list{
@@ -413,7 +413,7 @@ a:hover{
         text-decoration: none;
       }
       .social-icons ul li a box-icon:hover{
-        color: rgb(71, 6, 236);
+        color: #000;
       }
       .billboard{
         width: 100%;

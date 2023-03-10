@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="../css /style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Crypto Crib</title>
@@ -29,16 +28,14 @@
                     
                     <li><a href="">USSD</a></li>
                      
-                    <!-- <li><a href="">Business</a></li> -->
-                     
-                    <!-- <li><a href="">Developers</a></li> -->
+                   
                     
                     <li><a href="">FAQ</a></li>
                     
                 </ul>
                 <div class="nav-button">
-                    <a href="{% url 'signup-page' %} " ><button class="one">Get started</button></a> 
-                <a href="{% url 'login-page' %}"><button class="two">Sign in</button></a>
+                    <a href="signup.html" ><button class="one">Get started</button></a> 
+                <a href="login.html"><button class="two">Sign in</button></a>
                 </div>
                 
             </div>
@@ -59,14 +56,14 @@
                 right from your momo wallet</h3>
                 <p>App designed for all your needs<br>to help you manage your <br>spendings and reinvest money</p>
                 <div class="button">
-                    <a href="{% url 'signup-page' %}"><button>Get started</button></a>
+                    <a href="signup.html"><button>Get started</button></a>
                 </div>
                 <div class="image-img">
-                     <img src="{% static 'resources/images/undraw_bitcoin_re_urgq.svg' %}" alt="">
+                     <img src="../images/undraw_bitcoin_re_urgq.svg" alt="">
                 </div>
                 <div class="image">
                     <h3>Simple, Secure and fast</h3>
-                    <img src="{% static 'resources/images/one.webp' %}" alt="">
+                    <img src="../images/one.webp" alt="">
                 </div>
                
             </div>
@@ -74,49 +71,48 @@
                 <div class="col-1">
                     <h3>Effortless transactions</h3>
                     <div class="icon">
-                        <box-icon name='wallet' size="lg"></box-icon>
-                        <box-icon name='credit-card' size="lg"></box-icon> 
+                        <box-icon name='wallet' size="lg" color="white"></box-icon>
+                        <box-icon name='credit-card' size="lg" color="white"></box-icon> 
+                        
                         <p>"cryptocrib gives it's users an ability to make easy  <br>andfast transactions without any stress"</p>
                     </div>
                 </div>
                 <div class="col-2">
                     <h3>Wide network</h3>
                     <div class="icon">
-                        <box-icon name='bitcoin' type='logo'size='lg' ></box-icon>
-                        <box-icon name='coin' size="lg" ></box-icon>
+                        <box-icon name='bitcoin' type='logo'size='lg'color="white" ></box-icon>
+                        <box-icon name='coin' size="lg"color="white" ></box-icon>
                         <p>"allowing a wide network of crypto to be transacted,<br>cryptocrib gives users more freedom with crypto"</p>
                     </div>
                 </div>
                 <div class="col-3">
                     <h3>Momo integration</h3>
                     <div class="icon">
-                        <box-icon name='wallet' size="lg" ></box-icon>
-                        <box-icon name='devices' type='solid'size='lg' ></box-icon>
+                        <box-icon name='wallet' size="lg" color="white"></box-icon>
+                        <box-icon name='devices' type='solid'size='lg'color="white" ></box-icon>
                         <p>"No long processes just link crypto to momo wallet<br> and start trading and spending" </p>
                         <div class="icon-image">
-                            <img src="{% static 'resources/images/vodafone-icon.svg' %}" alt="">
-                            <img src="{% static 'resources/images/mtn-group.svg' %}" alt="">
-                            <img src="{% static 'resources/images/bharti-airtel-limited.svg' %}" alt="">
-                            <img src="{% static 'resources/images/visa.svg' %}" alt="">
-                            <img src="{% static 'resources/images/mastercard.svg' %}" alt="">
+                            <img src="../images/vodafone-icon.svg" alt="">
+                            <img src="../images/mtn-group.svg" alt="">
+                            <img src="../images/bharti-airtel-limited.svg" alt="">
                         </div>
                         
                     </div>
                 </div>
                 <div class="col-4">
                     <h3>Setup your account<br>in a few minutes</h3>
-                    <p>Hey, it only takes one minute</p>
+                    <p class="p">Hey, it only takes one minute</p>
                     <div class="main-icon">
                         <div class="icon">
-                        <box-icon name='user-circle' size="lg" color="rgb(71, 6, 236)" ></box-icon>
+                        <box-icon name='user-circle' size="lg" color="#000" ></box-icon>
                         <p>Create an account</p>
                     </div>
                     <div class="icon">
-                        <box-icon name='bank' type='solid' size="lg" color="rgb(71, 6, 236)" ></box-icon>
+                        <box-icon name='bank' type='solid' size="lg" color="#000" ></box-icon>
                         <p>Link your momo wallet</p>
                     </div>
                     <div class="icon">
-                        <box-icon name='money' size="lg" color="rgb(71, 6, 236)" ></box-icon>
+                        <box-icon name='money' size="lg" color="#000" ></box-icon>
                         <p>Start spending</p>
                     </div>
                     </div>
@@ -131,10 +127,10 @@
                     <h1>Your crypto live <br>just got easier</h1>
                     <p>App designed for all your needs<br>to help you manage your <br>spendings and reinvest money</p>
                     <div class="button">
-                        <a href="{% url 'signup-page' %}"><button>Get started</button></a>
+                        <a href="signup.html"><button>Get started</button></a>
                     </div>
                     <div class="image-image">
-                         <img src="{% static 'resources/images/undraw_digital_currency_qpak.svg' %}" alt="">
+                         <img src="../images/undraw_digital_currency_qpak.svg" alt="">
                         </div> 
                 </div>
         </div>
@@ -146,44 +142,47 @@
                 <h4>Company</h4>
                 <ul>
                     <li><a href="">About</a></li>
-                    <li><a href="">Careers</a></li>
-                    <li><a href="">Affiliates</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Press</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Buy / Sell</a></li>
+                    <li><a href="">USSD</a></li>
                 </ul>
             </div>
-            <div class="list">
-                <h4>Learn</h4>
-                <ul>
-                    <li><a href="">What is cryptocrib</a></li>
-                    <li><a href="">What is bitcoin</a></li>
-                    <li><a href="">Tips</a></li>
-                    <li><a href="">Any security issues</a></li>
-                    <li><a href="">Future plans</a></li>
-                </ul>
-            </div>
-            <div class="list">
-                <h4>Individuals</h4>
-                <ul>
-                    <li><a href="">Buy and Sell</a></li>
-                    <li><a href="">Trade</a></li>
-                    <li><a href="">Withdrawals</a></li>
-                    <li><a href="">Referals</a></li>
-                    <li><a href="">Wallet</a></li>
-                </ul>
-            </div> 
+           
+           
             </div>
             
             <div class="social-icons">
                 <ul>
-                    <li><a href=""><box-icon type='logo' name='linkedin' size="lg"></box-icon></a></li>
-                    <li><a href=""><box-icon name='instagram' type='logo' size="lg"></box-icon></a></li>
-                    <li><a href=""><box-icon name='twitter' type='logo' size="lg" ></box-icon></a></li>
+                    <li><a href=""><box-icon type='logo' name='linkedin' size="lg" color="#000"></box-icon></a></li>
+                    <li><a href=""><box-icon name='instagram' type='logo' size="lg" color="#000"></box-icon></a></li>
+                    <li><a href=""><box-icon name='twitter' type='logo' size="lg"color="#000" ></box-icon></a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <script src="{% static 'js/script.js' %}">
+    <script>
+        const menu = document.getElementById('menu');
+        const nav = document.getElementById('navigation');
+        const closeButton = document.getElementById('close');
+        const right = document.getElementById('right');
+        const sub = document.getElementById('sub');
+
+        menu.addEventListener('click',(e) =>{
+            
+            nav.style.display = 'block';
+            menu.style.display = 'none';
+            closeButton.style.display = 'block';    
+        })
+        closeButton.addEventListener('click',(e) =>{
+            nav.style.display = 'none';
+            menu.style.display = 'block';
+            closeButton.style.display = 'none';
+        })
+        right.addEventListener('click',() =>{
+            sub.style.display = 'block';
+        })
+        let
     </script>
      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
